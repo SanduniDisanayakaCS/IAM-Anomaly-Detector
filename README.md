@@ -18,8 +18,7 @@ A lightweight AI-powered app that detects **anomalous IAM (Identity and Access M
 
 ## 🚀 Live App
 
-🔗 [Click here to try the live version](https://sandunidisanayakacs-iam-anomaly-detector.streamlit.app)  
-*(Replace with your actual Streamlit URL)*
+🔗 [Click here to try the live version](https://iam-anomaly-detector-version-1.streamlit.app)
 
 ---
 
@@ -40,55 +39,56 @@ cd IAM-Anomaly-Detector
 
 🛠 Set up environment
 python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\Activate on Windows
+source .venv/bin/activate  # On Windows use .venv\Scripts\Activate
 pip install -r requirements.txt
 
 ▶ Run the app
+
 streamlit run app/main.py
 
 
 📄 How to Use With Other Datasets
-You can upload any IAM-like dataset in .csv format — it must include at least the following:
+You can upload any IAM-like dataset in .csv format — it must include at least the following columns:
 
 Column Name | Description
 eventTime | ISO format timestamp
 userIdentity | Username or user ID
-eventName | IAM event name (ListBuckets, etc)
+eventName | IAM event name (e.g., ListBuckets)
 sourceIPAddress | IP address of requester
-awsRegion | Region (us-east-1, etc)
-userAgent | Access tool (aws-cli, browser)
+awsRegion | Region (e.g., us-east-1)
+userAgent | Access tool (e.g., aws-cli)
 responseElements | Status (Success, Failed)
 
-✅ Column names must match. No changes are needed in the code if these columns exist.
+✅ Column names must match. No changes are needed in the code if these exist.
 
 
 🔍 How It Works (Behind the Scenes)
-Upload your CSV
+Upload your CSV file
 
-App:
+The app:
 
-Parses time, encodes all categorical features
+Parses time and extracts time-based features
 
-Trains Isolation Forest in real-time
+Encodes all categorical fields
 
-Predicts anomaly column: 1 = normal, -1 = anomaly
+Trains an Isolation Forest model in real-time
 
-Visual output using matplotlib + seaborn
+Predicts anomalies (1 = normal, -1 = anomaly)
+
+Displays interactive visualizations (Matplotlib + Seaborn)
 
 🌐 Deploy It Yourself (Streamlit Cloud)
 Push your repo to GitHub
 
 Go to https://streamlit.io/cloud
 
-Select repo → main branch → set file path to:
+Select your repo → choose main branch → set file path to:
 
 app/main.py
 
+
 📧 Contact
 Author: Sanduni Disanayaka
-📧 sandunidisanayaka96@gmail.com
+📧 Email: sandunidisanayaka96@gmail.com
 🌍 GitHub: @SanduniDisanayakaCS
-
-
----
 
