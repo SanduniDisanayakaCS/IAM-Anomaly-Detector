@@ -1,0 +1,37 @@
+[
+    {
+      "eventTime": "2024-12-01T12:00:00Z",
+      "userIdentity": "alice",
+      "eventName": "ListBuckets",
+      "sourceIPAddress": "192.168.1.10",
+      "awsRegion": "us-west-2",
+      "userAgent": "aws-cli/2.7.0",
+      "responseElements": "Success",
+      "requestParameters": {}
+    },
+    {
+      "eventTime": "2024-12-01T12:10:00Z",
+      "userIdentity": "bob",
+      "eventName": "CreateUser",
+      "sourceIPAddress": "192.168.1.23",
+      "awsRegion": "us-east-1",
+      "userAgent": "aws-sdk-java",
+      "responseElements": "Success",
+      "requestParameters": {
+        "userName": "new_user"
+      }
+    },
+    {
+      "eventTime": "2024-12-01T12:20:00Z",
+      "userIdentity": "eve",
+      "eventName": "DeleteUser",
+      "sourceIPAddress": "10.0.0.5",
+      "awsRegion": "ap-south-1",
+      "userAgent": "bot",
+      "responseElements": "Failed",
+      "requestParameters": {
+        "userName": "admin"
+      }
+    }
+  ]
+  

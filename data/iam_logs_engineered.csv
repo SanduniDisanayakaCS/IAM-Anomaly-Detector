@@ -1,0 +1,4 @@
+hour,minute,timestamp,userIdentity_encoded,eventName_encoded,sourceIPAddress_encoded,awsRegion_encoded,userAgent_encoded,responseElements_encoded
+12,0,1733054400,0,2,1,2,0,1
+12,10,1733055000,1,0,2,1,1,1
+12,20,1733055600,2,1,0,0,2,0
